@@ -16,7 +16,7 @@ def about():
 
 @app.route('/gallery')
 def gallery():
-    return app.send_static_file('gallery.html')
+    return render_template('gallery.html')
 
 @app.route('/contact')
 def contact():

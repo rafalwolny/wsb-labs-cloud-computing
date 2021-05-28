@@ -7,9 +7,10 @@
     </head>
     <body>
         <h1> Gallery </h1>
-        <img src="{{ url_for('static', filename='guitar.jpg') }}" alt="guitar"><br>
+        <p>Picture of a guitar:</p>
+        <img src="{{url_for('static', filename='guitar.jpg') }}" width="320px" height="480px" alt="guitar"><br>
         <p>
-            <a href="{{ url_for('index') }}">Back to Home</a>
+            <a href="/">Back to Home</a>
         </p>
     </body>
 </html>
