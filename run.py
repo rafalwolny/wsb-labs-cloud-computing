@@ -2,10 +2,9 @@ from flask import Flask
 from flask import request
 import os
 from flask import render_template, send_from_directory
-from flask import abort, redirect, url_for, make_response
+from flask import abort, make_response
 
 app = Flask(__name__)
-
 
 @app.route('/')
 def home():
@@ -22,13 +21,6 @@ def gallery():
 @app.route('/contact')
 def contact():
     return app.send_static_file('contact.html')
-
-# @app.route('/user/<username>', methods=['GET', 'POST'])
-# def show_user_profile(username):
-#     if request.method == 'POST':
-#         return 'HTTP POST for user %s with password %s' % (username, request.form['password'])
-#     else:
-#         return 'HTTP GET for user %s' % username
 
 @app.route('/error_denied')
 def error_denied():
@@ -47,12 +39,6 @@ def not_found_error(error):
 @app.route('/favicon.ico')
 def favicon():
     return send_from_directory(os.path.join(app.root_path, 'static'), 'favicon.ico', mimetype='image/vnd.microsoft.icon')
-
-# 
-#<!-- <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico'}}"> --
-#
-#
-# 
 
 if __name__ == '__main__':
     app.run(debug=True)
