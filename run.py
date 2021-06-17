@@ -12,7 +12,7 @@ def home():
 
 @app.route('/about')
 def about():
-    return app.send_static_file('about.html')
+    return render_template('about.html')
 
 @app.route('/gallery')
 def gallery():
@@ -20,7 +20,7 @@ def gallery():
 
 @app.route('/contact')
 def contact():
-    return app.send_static_file('contact.html')
+    return render_template('contact.html')
 
 @app.route('/error_denied')
 def error_denied():

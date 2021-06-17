@@ -1,16 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Gallery</title>
-    </head>
-    <body>
-        <h1> Gallery </h1>
-        <p>Picture of a guitar:</p>
-        <img src="{{url_for('static', filename='guitar.jpg') }}" width="320px" height="480px" alt="guitar"><br>
-        <p>
-            <a href="/">Back to Home</a>
-        </p>
-    </body>
-</html>
+{% extends "base.html" %}
+{% block title %}Gallery{% endblock %}
+{% set active_page = "gallery" -%}
+{% block body %}
+<h1> Gallery </h1>
+<p>Picture of a guitar:</p>
+<img src="{{url_for('static', filename='guitar.jpg') }}" width="320px" height="480px" alt="guitar"><br>
+<p>
+  <a href="/">Back to Home</a>
+</p>
+{% endblock %}

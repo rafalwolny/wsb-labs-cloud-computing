@@ -1,15 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Rafal Wolny- Website on Azure</title>
-        
-    </head>
-    <body>
-        <h1> Website deployed on Azure Cloud by Rafal Wolny </h1>
-        <a href="{{ url_for('about') }}">About me</a>
-        <a href="{{ url_for('gallery') }}">Gallery</a>
-        <a href="{{ url_for('contact') }}">Contact me</a>
-    </body>
-</html>
+{% extends "base.html" %}
+{% block title %}Home{% endblock %}
+{% set active_page = "/" -%}
+{% block body %}
+<div class="container">
+  <h1> Website deployed on Azure Cloud by Rafal Wolny </h1>
+</div>
+{% endblock %}
