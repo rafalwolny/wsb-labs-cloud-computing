@@ -2,10 +2,15 @@
 {% block title %}Contact me{% endblock %}
 {% set active_page = "contact" -%}
 {% block body %}
-<h1>Please contact me </h1>
-<p>Rafal Wolny</p>
-<a href="mailto:contact_me@email.com">Send email</a><br>
-<p>
-  <a href="/">Back to Home</a>
-</p>
+<div class="container">
+  <h1 class="display-4 text-center">Please contact me </h1>
+  <div class="row justify-content-center">
+    <a class="text-center" href="mailto:contact_me@email.com" style="text-decoration: none;">
+      <button type="button" class="btn btn-lg btn-outline-primary">
+        Send email
+      </button>
+    </a>
+  </div>
+</div>
+
 {% endblock %}
