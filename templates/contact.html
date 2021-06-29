@@ -2,15 +2,37 @@
 {% block title %}Contact me{% endblock %}
 {% set active_page = "contact" -%}
 {% block body %}
-<div class="container">
+<div class="container" style="display: grid; gap: 30px 30px; margin-top: 40px;">
   <h1 class="display-4 text-center">Please contact me </h1>
   <div class="row justify-content-center">
-    <a class="text-center" href="mailto:contact_me@email.com" style="text-decoration: none;">
-      <button type="button" class="btn btn-lg btn-outline-primary">
-        Send email
-      </button>
-    </a>
+    <form style="display: grid; gap: 30px 30px;">
+      <div class="form-row align-items-center">
+        <div class="col-sm-3 my-1">
+          <label class="sr-only" for="inlineFormInputName">Name</label>
+          <input type="text" class="form-control" id="inlineFormInputName" placeholder="Jan Kowalski">
+        </div>
+        <div class="col-sm-3 my-1">
+          <label class="sr-only" for="inlineFormInputGroupUsername">Nick</label>
+          <div class="input-group">
+            <div class="input-group-prepend">
+              <div class="input-group-text">@</div>
+            </div>
+            <input type="text" class="form-control" id="inlineFormInputGroupUsername" placeholder="Nick">
+          </div>
+        </div>
+        <div class="col-auto my-1">
+          <a class="text-center" href="mailto:contact_me@email.com" style="text-decoration: none;">
+            <button type="button" class="btn btn-primary">Submit</button>
+          </a>
+        </div>
+      </div>
+      <div class="input-group">
+        <div class="input-group-prepend">
+          <span class="input-group-text">Message</span>
+        </div>
+        <textarea class="form-control" aria-label="With textarea"></textarea>
+      </div>
+    </form>
   </div>
 </div>
-
 {% endblock %}
